@@ -1,4 +1,15 @@
 # PyTorch implementation of sequence labelling for Chinese company name using BERT+CRF
+# Purpose 
+Parse Chinese company name to different parts correctly. For example, the name `大连泰和道农业发展有限公司` will be parsed to `大连 / 泰和道 / 农业发展 / 有限公司` with label `LOC / NAME / INDU / ORG`.
+
+The predict result is as follows:
+
+```
+[武汉]【翔海】{水处理}<有限公司>
+[漯河市]【天利】{白瓜籽加工}<有限责任公司>
+[大连]【泰和道】{农业发展}<有限公司>
+[天津]【大致】【和堂】{医药}<有限公司>【延年】{中药}<店>
+```
 
 With `bert-base-chinese`, the result is as follows on `test` set:
 
